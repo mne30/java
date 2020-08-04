@@ -61,15 +61,15 @@ public class MainClass {
     }
 
     //ai turn
-        private static void aiTurn(){
-            int X;
-            int Y;
-            do {
-                X = random.nextInt(gameFieldSize);
-                Y = random.nextInt(gameFieldSize);
-            } while(!validCell(X, Y) && !checkEmpty(X,Y));
-            gameFiled[X][Y] = AI_SIGN;
-        }
+    private static void aiTurn(){
+        int X;
+        int Y;
+        do {
+            X = random.nextInt(gameFieldSize);
+            Y = random.nextInt(gameFieldSize);
+        } while(!validCell(X, Y) && !checkEmpty(X,Y));
+        gameFiled[X][Y] = AI_SIGN;
+    }
     //create game field
     private static void createGameField(){
         System.out.println("Введите размерность поля: ");
@@ -145,7 +145,7 @@ public class MainClass {
     //repeat
     private static boolean repeatGame(String a){
         System.out.println("Победил " + a + "\n"
-                            + "! Желаете повторить игру?");
+                + "! Желаете повторить игру?");
         String answer = userInput.nextLine();
         return answer.toLowerCase() == "yes" || answer.toLowerCase() == "да";
     }
