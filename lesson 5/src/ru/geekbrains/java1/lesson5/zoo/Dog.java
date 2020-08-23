@@ -4,11 +4,18 @@ import ru.geekbrains.java1.lesson5.Animal;
 
 public class Dog extends Animal {
 
+
     public Dog (String name, String birthDay, String color, float moveLength, float heighJump, float swimLength){
         super(name, birthDay, color);
         super.moveLength = moveLength;
         super.heighJump = heighJump;
         super.swimLength = swimLength; ;
+    }
+    public Dog(String name, String birthDay, String color){
+        super(name, birthDay, color);
+        super.heighJump = 0.5f;
+        super.moveLength = 500f;
+        super.swimLength = 10f;
     }
 
     @Override

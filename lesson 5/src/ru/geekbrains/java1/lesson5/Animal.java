@@ -6,7 +6,6 @@ import java.time.format.DateTimeFormatter;
 
 public abstract class Animal {
 
-    protected String birthDay;
     private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
     private static final LocalDate CURRENT_DATE = LocalDate.now();
     protected int age;
@@ -38,6 +37,11 @@ public abstract class Animal {
     protected abstract boolean move(float moveLength);
     protected abstract boolean jump(float heighJump);
     protected abstract boolean swim(float swimLength);
+
+    protected void printInfo(){
+        System.out.println("name " + this.name + ", color " + this.color + ", swimL " + this.swimLength + ", jumpH " + this.heighJump + ", age" + this.age +
+                ", runL " + this.moveLength);
+    }
 
     //calculate age
     private int setAge(LocalDate birthDay){

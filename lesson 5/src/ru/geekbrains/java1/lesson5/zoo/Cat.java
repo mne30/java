@@ -10,6 +10,11 @@ public class Cat extends Animal {
         super.heighJump = heighJump;
         super.swimLength = 0.00f;
     }
+    public Cat(String name, String birthDay, String color){
+        super(name, birthDay, color);
+        super.heighJump = 2f;
+        super.moveLength = 100f;
+    }
 
     @Override
     public boolean voice(){
