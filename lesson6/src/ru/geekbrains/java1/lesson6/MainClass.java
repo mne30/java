@@ -96,21 +96,15 @@ public class MainClass {
                     currentCount = 0;
                     continue;
                 }
+                if( currentByte == byteArray[currentCount]){
+                    currentCount++;
+                } else{
+                    currentCount = 0;
+                    continue;
+                }
                 if(currentCount == countYes){
                     result = true;
                     break;
-                } else if( currentCount < countYes){
-                    if( currentByte == byteArray[currentCount]){
-                        currentCount++;
-                    } else{
-                        currentCount = 0;
-                        continue;
-                    }
-                    if(currentCount == countYes){
-                        result = true;
-                        break;
-                    }
-
                 }
             }
             return result;
